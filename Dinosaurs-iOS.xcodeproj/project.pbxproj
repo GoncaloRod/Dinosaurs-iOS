@@ -12,6 +12,8 @@
 		10042B12282BF57600A88A72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10042B10282BF57600A88A72 /* Main.storyboard */; };
 		10042B14282BF57600A88A72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10042B13282BF57600A88A72 /* Assets.xcassets */; };
 		104898FF282EA840001DD945 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104898FE282EA840001DD945 /* GameScene.swift */; };
+		106F43EE2841050F0067B9B6 /* Dinosaur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106F43ED2841050F0067B9B6 /* Dinosaur.swift */; };
+		10CE1B082841086200DF16C4 /* Dinosaurs.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 10CE1B072841086200DF16C4 /* Dinosaurs.atlas */; };
 		10F8941C282EA31500253988 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F8941B282EA31500253988 /* MainMenuScene.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +25,8 @@
 		10042B13282BF57600A88A72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10042B15282BF57600A88A72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		104898FE282EA840001DD945 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		106F43ED2841050F0067B9B6 /* Dinosaur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dinosaur.swift; sourceTree = "<group>"; };
+		10CE1B072841086200DF16C4 /* Dinosaurs.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = Dinosaurs.atlas; path = ../../Dinosaurs.atlas; sourceTree = "<group>"; };
 		10F8941B282EA31500253988 /* MainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,6 +60,7 @@
 		10042B05282BF57600A88A72 /* Dinosaurs-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				10CE1B072841086200DF16C4 /* Dinosaurs.atlas */,
 				10042B06282BF57600A88A72 /* AppDelegate.swift */,
 				10042B0E282BF57600A88A72 /* GameViewController.swift */,
 				10042B10282BF57600A88A72 /* Main.storyboard */,
@@ -63,6 +68,7 @@
 				10042B15282BF57600A88A72 /* Info.plist */,
 				10F8941B282EA31500253988 /* MainMenuScene.swift */,
 				104898FE282EA840001DD945 /* GameScene.swift */,
+				106F43ED2841050F0067B9B6 /* Dinosaur.swift */,
 			);
 			path = "Dinosaurs-iOS";
 			sourceTree = "<group>";
@@ -124,6 +130,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10CE1B082841086200DF16C4 /* Dinosaurs.atlas in Resources */,
 				10042B12282BF57600A88A72 /* Main.storyboard in Resources */,
 				10042B14282BF57600A88A72 /* Assets.xcassets in Resources */,
 			);
@@ -138,6 +145,7 @@
 			files = (
 				10F8941C282EA31500253988 /* MainMenuScene.swift in Sources */,
 				10042B0F282BF57600A88A72 /* GameViewController.swift in Sources */,
+				106F43EE2841050F0067B9B6 /* Dinosaur.swift in Sources */,
 				104898FF282EA840001DD945 /* GameScene.swift in Sources */,
 				10042B07282BF57600A88A72 /* AppDelegate.swift in Sources */,
 			);
