@@ -14,6 +14,7 @@
 		104898FF282EA840001DD945 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104898FE282EA840001DD945 /* GameScene.swift */; };
 		106F43EE2841050F0067B9B6 /* Dinosaur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106F43ED2841050F0067B9B6 /* Dinosaur.swift */; };
 		10CE1B082841086200DF16C4 /* Dinosaurs.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 10CE1B072841086200DF16C4 /* Dinosaurs.atlas */; };
+		10CE1B0A284113FE00DF16C4 /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CE1B09284113FE00DF16C4 /* Updatable.swift */; };
 		10F8941C282EA31500253988 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F8941B282EA31500253988 /* MainMenuScene.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		104898FE282EA840001DD945 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		106F43ED2841050F0067B9B6 /* Dinosaur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dinosaur.swift; sourceTree = "<group>"; };
 		10CE1B072841086200DF16C4 /* Dinosaurs.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = Dinosaurs.atlas; path = ../../Dinosaurs.atlas; sourceTree = "<group>"; };
+		10CE1B09284113FE00DF16C4 /* Updatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updatable.swift; sourceTree = "<group>"; };
 		10F8941B282EA31500253988 /* MainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +71,7 @@
 				10F8941B282EA31500253988 /* MainMenuScene.swift */,
 				104898FE282EA840001DD945 /* GameScene.swift */,
 				106F43ED2841050F0067B9B6 /* Dinosaur.swift */,
+				10CE1B09284113FE00DF16C4 /* Updatable.swift */,
 			);
 			path = "Dinosaurs-iOS";
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10CE1B0A284113FE00DF16C4 /* Updatable.swift in Sources */,
 				10F8941C282EA31500253988 /* MainMenuScene.swift in Sources */,
 				10042B0F282BF57600A88A72 /* GameViewController.swift in Sources */,
 				106F43EE2841050F0067B9B6 /* Dinosaur.swift in Sources */,
