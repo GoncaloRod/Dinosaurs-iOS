@@ -12,6 +12,7 @@
 		10042B12282BF57600A88A72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10042B10282BF57600A88A72 /* Main.storyboard */; };
 		10042B14282BF57600A88A72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10042B13282BF57600A88A72 /* Assets.xcassets */; };
 		104898FF282EA840001DD945 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104898FE282EA840001DD945 /* GameScene.swift */; };
+		106D84BA2846665300CC1860 /* Cactus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106D84B92846665300CC1860 /* Cactus.swift */; };
 		106F43EE2841050F0067B9B6 /* Dinosaur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106F43ED2841050F0067B9B6 /* Dinosaur.swift */; };
 		10CE1B082841086200DF16C4 /* Dinosaurs.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 10CE1B072841086200DF16C4 /* Dinosaurs.atlas */; };
 		10CE1B0A284113FE00DF16C4 /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CE1B09284113FE00DF16C4 /* Updatable.swift */; };
@@ -26,6 +27,7 @@
 		10042B13282BF57600A88A72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10042B15282BF57600A88A72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		104898FE282EA840001DD945 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		106D84B92846665300CC1860 /* Cactus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cactus.swift; sourceTree = "<group>"; };
 		106F43ED2841050F0067B9B6 /* Dinosaur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dinosaur.swift; sourceTree = "<group>"; };
 		10CE1B072841086200DF16C4 /* Dinosaurs.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = Dinosaurs.atlas; path = ../../Dinosaurs.atlas; sourceTree = "<group>"; };
 		10CE1B09284113FE00DF16C4 /* Updatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updatable.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				104898FE282EA840001DD945 /* GameScene.swift */,
 				106F43ED2841050F0067B9B6 /* Dinosaur.swift */,
 				10CE1B09284113FE00DF16C4 /* Updatable.swift */,
+				106D84B92846665300CC1860 /* Cactus.swift */,
 			);
 			path = "Dinosaurs-iOS";
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 				106F43EE2841050F0067B9B6 /* Dinosaur.swift in Sources */,
 				104898FF282EA840001DD945 /* GameScene.swift in Sources */,
 				10042B07282BF57600A88A72 /* AppDelegate.swift in Sources */,
+				106D84BA2846665300CC1860 /* Cactus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

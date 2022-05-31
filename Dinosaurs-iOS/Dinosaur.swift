@@ -10,6 +10,12 @@ class Dinosaur : SKNode, Updatable {
     
     var sprite : SKSpriteNode
     
+    var verticalSpeed : CGFloat = 0
+    
+    var grounded : Bool = true
+    
+    var startingPosY : CGFloat = 0
+    
     override init() {
         atlas = SKTextureAtlas(named: "Dinosaurs")
         
@@ -19,6 +25,8 @@ class Dinosaur : SKNode, Updatable {
         dinoRunFrames.append(atlas.textureNamed("Dino_Run_2"))
         
         sprite = SKSpriteNode(texture: dinoRunFrames[0])
+        
+        sprite.anchorPoint = CGPoint(x: 0.5, y: 0)
         
         sprite.xScale = scale
         sprite.yScale = scale
@@ -37,11 +45,25 @@ class Dinosaur : SKNode, Updatable {
     
     func update(currentTime: TimeInterval) {
         
+        position.y += verticalSpeed * CGFloat(currentTime * 0.001)
+        
+        if position.y <= startingPosY {
+            grounded = true
+            position.y = startingPosY
+        }
+        else {
+            grounded = false
+        }
+        
+        if !grounded {
+            verticalSpeed -= CGFloat(currentTime * 0.000025)
+        }
+        
     }
     
     func jump() {
         
-        print("Jump!")
+        verticalSpeed = 2
         
     }
     
