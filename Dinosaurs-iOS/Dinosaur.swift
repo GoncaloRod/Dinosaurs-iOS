@@ -6,7 +6,11 @@ class Dinosaur : SKNode, Updatable {
     let scale : CGFloat = 0.05
     
     var atlas : SKTextureAtlas
+    
+    var animation : SKAction
     var dinoRunFrames : [SKTexture] = []
+    
+    var dinoDeadFrame : SKTexture
     
     var sprite : SKSpriteNode
     
@@ -16,6 +20,8 @@ class Dinosaur : SKNode, Updatable {
     
     var startingPosY : CGFloat = 0
     
+    var isDead : Bool = false
+    
     override init() {
         atlas = SKTextureAtlas(named: "Dinosaurs")
         
@@ -24,6 +30,8 @@ class Dinosaur : SKNode, Updatable {
         dinoRunFrames.append(atlas.textureNamed("Dino_Run_1"))
         dinoRunFrames.append(atlas.textureNamed("Dino_Run_2"))
         
+        dinoDeadFrame = atlas.textureNamed("Dino_Dead")
+        
         sprite = SKSpriteNode(texture: dinoRunFrames[0])
         
         sprite.anchorPoint = CGPoint(x: 0.5, y: 0)
@@ -31,10 +39,19 @@ class Dinosaur : SKNode, Updatable {
         sprite.xScale = scale
         sprite.yScale = scale
         
-        let animation = SKAction.animate(with: dinoRunFrames, timePerFrame: 0.1)
+        animation = SKAction.animate(with: dinoRunFrames, timePerFrame: 0.1)
         sprite.run(SKAction.repeatForever(animation))
         
         super.init()
+        
+        physicsBody = SKPhysicsBody(rectangleOf: sprite.size)
+        
+        physicsBody?.isDynamic = true
+        physicsBody?.usesPreciseCollisionDetection = true
+        
+        physicsBody?.categoryBitMask = PhysicsCategories.Dinosaur
+        physicsBody?.contactTestBitMask = PhysicsCategories.Cactus
+        physicsBody?.collisionBitMask = PhysicsCategories.None
         
         addChild(sprite)
     }
@@ -44,6 +61,10 @@ class Dinosaur : SKNode, Updatable {
     }
     
     func update(currentTime: TimeInterval) {
+        
+        if isDead {
+            return
+        }
         
         position.y += verticalSpeed * CGFloat(currentTime * 0.001)
         
@@ -56,15 +77,36 @@ class Dinosaur : SKNode, Updatable {
         }
         
         if !grounded {
-            verticalSpeed -= CGFloat(currentTime * 0.000025)
+            verticalSpeed -= CGFloat(currentTime * 0.00001)
         }
         
     }
     
     func jump() {
         
-        verticalSpeed = 2
+        if isDead {
+            return
+        }
         
+        verticalSpeed = 1.4
+        
+    }
+    
+    func kill() {
+        
+        sprite.removeAllActions()
+        sprite.texture = dinoDeadFrame
+        
+        isDead = true
+        
+    }
+    
+    func revive () {
+        position.y = startingPosY
+        
+        sprite.run(SKAction.repeatForever(animation))
+        
+        isDead = false
     }
     
 }
