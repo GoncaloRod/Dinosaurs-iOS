@@ -60,13 +60,13 @@ class Dinosaur : SKNode, Updatable {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func update(currentTime: TimeInterval) {
+    func update(deltaTime: TimeInterval) {
         
         if isDead {
             return
         }
         
-        position.y += verticalSpeed * CGFloat(currentTime * 0.001)
+        position.y += verticalSpeed * CGFloat(deltaTime) * 40
         
         if position.y <= startingPosY {
             grounded = true
@@ -77,7 +77,7 @@ class Dinosaur : SKNode, Updatable {
         }
         
         if !grounded {
-            verticalSpeed -= CGFloat(currentTime * 0.00001)
+            verticalSpeed -= CGFloat(deltaTime) * 40
         }
         
     }
@@ -88,7 +88,7 @@ class Dinosaur : SKNode, Updatable {
             return
         }
         
-        verticalSpeed = 1.4
+        verticalSpeed = 12
         
     }
     

@@ -12,6 +12,8 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
     
     var score : CGFloat = 0
     
+    var lastTime : TimeInterval = 0
+    
     override func didMove(to view: SKView) {
         
         backgroundColor = .white
@@ -42,15 +44,23 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
     
     override func update(_ currentTime: TimeInterval) {
         
+        if lastTime == 0 {
+            lastTime = currentTime
+        }
+        
+        let deltaTime = currentTime - lastTime
+        
         for item in updatables {
-            item.update(currentTime: currentTime)
+            item.update(deltaTime: deltaTime)
         }
         
         if !dinosaur.isDead {
-            score += CGFloat(currentTime * 0.00001)
+            score += CGFloat(deltaTime * 10)
         }
         
         updateScoreLabel()
+        
+        lastTime = currentTime
     }
     
     func updateScoreLabel() {

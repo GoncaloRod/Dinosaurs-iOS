@@ -3,7 +3,8 @@ import GameKit
 
 class Cactus : SKNode, Updatable {
     
-    let startSpeed : CGFloat = 0.5
+    let startSpeed : CGFloat = 1
+    let speedIncrement : CGFloat = 0.02
         
     let scale : CGFloat = 0.05
     
@@ -15,7 +16,6 @@ class Cactus : SKNode, Updatable {
     
     var sprite : SKSpriteNode
     
-    let speedIncrement : CGFloat = 0.02
     var cactusSpeed : CGFloat
     
     var running : Bool = true
@@ -53,13 +53,13 @@ class Cactus : SKNode, Updatable {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func update(currentTime: TimeInterval) {
+    func update(deltaTime: TimeInterval) {
         
         if !running {
             return
         }
         
-        position.x += CGFloat(currentTime * -0.001) * cactusSpeed
+        position.x -= CGFloat(deltaTime) * 400 * cactusSpeed
         
         if position.x <= frame.width * -0.15 {
             position = Cactus.randomPosition(frameWidth, frameHeight)
