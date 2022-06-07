@@ -67,7 +67,7 @@ class GameScene : SKScene, SKPhysicsContactDelegate {
         scoreLabel.text = "SCORE: \(Int(score))"
     }
     
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         if dinosaur.isDead {
             dinosaur.revive()

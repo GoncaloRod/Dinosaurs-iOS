@@ -84,7 +84,7 @@ class Dinosaur : SKNode, Updatable {
     
     func jump() {
         
-        if isDead {
+        if isDead || !grounded {
             return
         }
         
